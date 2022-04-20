@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    background-color: black;
+    font-family: Georgia, serif;
+}
+
+.first{
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#popup{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(28, 28, 26, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 1.5rem 4rem;
+}
+
+#popup-header{
+    text-align: right;
+    height: 10%;
+}
+
+#popup-close{
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+#popup-body{
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.part{
+    height: 200px;
+    width: 200px;
+    background-color: wheat;
+}
+
+header{
+    width: 80vw;
+    min-height: 10vh;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle{
+    width: 100%;
+    min-height: 90vh;
+
+    background-image: url('./Images/urus2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-intro{
+    margin-top: 8rem;
+    color: lime;
+    font-size: 6rem;
+    text-align: center;
+}
+
+#main-slogan{
+    color: rgb(0, 255, 149);
+    font-size: 2rem;
+    font-style: italic;
+}
+
+#learnbutton{
+    padding: 1rem 2.5rem;
+    margin: 2rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+#learnbutton:hover{
+    transform: scale(0.98);
+    background-color: rgba(240, 248, 255, 0.813);
+}
+
+.nav{
+    width: 45px;
+    display: block;
+}
+
+.nav div{
+    height: 4px;
+    background-color: white;
+    margin: 8px 0;
+    border-radius: 25px;
+    transition: 0.2s linear;
+}
+
+.one{
+    width: 45px;
+}
+.two{
+    width: 27px;
+}
+.three{
+    width: 35px;
+}
+
+.nav:hover div{
+    width: 45px;
+}
