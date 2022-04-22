@@ -15,6 +15,10 @@ body{
     overflow: hidden;
 }
 
+
+/*************************************************** Styles for the popup **************************************/
+
+/* Popup menu which takes full height and width, displayed over the main page*/
 #popup{
     width: 100vw;
     height: 100vh;
@@ -26,11 +30,15 @@ body{
     padding: 1.5rem 4rem;
 }
 
+/* Header of the popup menu with close button */
 #popup-header{
     text-align: right;
     height: 10%;
+
+    background-color: rgba(102, 217, 102, 0.9);
 }
 
+/* 'X' button for closing the popup menu */
 #popup-close{
     background-color: transparent;
     border: none;
@@ -39,21 +47,54 @@ body{
     cursor: pointer;
 }
 
+/* Main center body of the popup which serves as a container for parts */
 #popup-body{
-    height: 90%;
+    height: 80%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
+
+    background-color: rgba(232, 99, 121, 0.9);
 }
 
+/* Each area holding information within popup menu body */
 .part{
     height: 200px;
     width: 200px;
     background-color: wheat;
 }
 
+#popup-footer{
+    height: 10%;
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#popup-footer>a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Each small container in popup footer which holds social media link*/
+.media{
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.media-icon{
+    height: 40px;
+    width: 40px;
+}
+
+/******************************************** Styles for the popup ends *******************************************/
+
+/* Header of the main page (not popup) */
 header{
     width: 80vw;
     min-height: 10vh;
@@ -64,6 +105,7 @@ header{
     align-items: center;
 }
 
+/* Middle part of the main page excluding header and footer */
 .middle{
     width: 100%;
     min-height: 90vh;
@@ -79,6 +121,7 @@ header{
     align-items: center;
 }
 
+/* First Motors text logo */
 #main-intro{
     margin-top: 8rem;
     color: lime;
@@ -86,12 +129,14 @@ header{
     text-align: center;
 }
 
+/* 'We bring you luxury' slogan */
 #main-slogan{
     color: rgb(0, 255, 149);
     font-size: 2rem;
     font-style: italic;
 }
 
+/* 'Learn More...' button */
 #learnbutton{
     padding: 1rem 2.5rem;
     margin: 2rem;
@@ -104,11 +149,13 @@ header{
     cursor: pointer;
 }
 
+/* Animation is there once you hover 'Learn More...' button*/
 #learnbutton:hover{
     transform: scale(0.98);
     background-color: rgba(240, 248, 255, 0.813);
 }
 
+/* Three stripes button which opens popup menu */
 .nav{
     width: 45px;
     display: block;
@@ -121,7 +168,7 @@ header{
     border-radius: 25px;
     transition: 0.2s linear;
 }
-
+/*==== Children of the nav button =====*/
 .one{
     width: 45px;
 }
@@ -131,6 +178,7 @@ header{
 .three{
     width: 35px;
 }
+/*======================================*/
 
 .nav:hover div{
     width: 45px;
