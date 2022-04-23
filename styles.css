@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
 body{
     width: 100vw;
     background-color: black;
@@ -34,8 +39,6 @@ body{
 #popup-header{
     text-align: right;
     height: 10%;
-
-    background-color: rgba(102, 217, 102, 0.9);
 }
 
 /* 'X' button for closing the popup menu */
@@ -56,14 +59,39 @@ body{
     justify-items: center;
     align-items: center;
 
-    background-color: rgba(232, 99, 121, 0.9);
+    /*background-color: rgba(232, 99, 121, 0.9);*/
 }
 
 /* Each area holding information within popup menu body */
 .part{
-    height: 200px;
-    width: 200px;
-    background-color: wheat;
+    height: 300px;
+    width: 300px;
+}
+
+.part>a{
+    transition: color 0.2s linear;
+}
+
+.part>a:hover{
+    color: yellow;
+}
+
+.part{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    text-align: center;
+}
+
+#part1{
+    background-image: url('./Images/bmw.png');
+}
+#part2{
+    background-image: url('./Images/luxury.png');
+}
+#part3{
+    background-image: url('./Images/suv.png');
 }
 
 #popup-footer{
