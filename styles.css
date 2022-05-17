@@ -1,213 +1,172 @@
 *{
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
 }
 
 a{
-    color: white;
     text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style-type: none;
 }
 
 body{
-    width: 100vw;
-    background-color: black;
-    font-family: Georgia, serif;
-}
-
-.first{
-    max-height: 100vh;
-    overflow: hidden;
-}
-
-
-/*************************************************** Styles for the popup **************************************/
-
-/* Popup menu which takes full height and width, displayed over the main page*/
-#popup{
-    width: 100vw;
     height: 100vh;
-    background-color: rgba(28, 28, 26, 0.9);
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    padding: 1.5rem 4rem;
-}
-
-/* Header of the popup menu with close button */
-#popup-header{
-    text-align: right;
-    height: 10%;
-}
-
-/* 'X' button for closing the popup menu */
-#popup-close{
-    background-color: transparent;
-    border: none;
-    font-size: 3rem;
-    color: white;
-    cursor: pointer;
-}
-
-/* Main center body of the popup which serves as a container for parts */
-#popup-body{
-    height: 80%;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
 
-    /*background-color: rgba(232, 99, 121, 0.9);*/
+    background-color: lime;
 }
 
-/* Each area holding information within popup menu body */
-.part{
-    height: 300px;
-    width: 300px;
+/* Main mother container inside the body which contains everything in it */
+.main-container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: lime;
 }
 
-.part>a{
-    transition: color 0.2s linear;
-}
-
-.part>a:hover{
-    color: yellow;
-}
-
-.part{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    text-align: center;
-}
-
-#part1{
-    background-image: url('./Images/bmw.png');
-}
-#part2{
-    background-image: url('./Images/luxury.png');
-}
-#part3{
-    background-image: url('./Images/suv.png');
-}
-
-#popup-footer{
-    height: 10%;
-    display: grid;
-    gap: 2%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-#popup-footer>a{
-    text-decoration: none;
-    color: white;
-}
-
-/* Each small container in popup footer which holds social media link*/
-.media{
-    color: white;
-    padding: 0 20px;
+/*=========================== Header styles =================================*/
+header{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    padding: 1rem 0;
+    height: 10vh;
+
+    background-color: orange;
 }
 
-.media-icon{
+/* H1 Element which serves as a simple text logo of the website */
+#logo{
+    font-weight: bold;
+    color: black;
+}
+
+/* UL element which contains navigation links and it's flex */
+#navigation{
+    display: flex;
+}
+
+/* List items inside the navigation link container */
+#navigation li>a{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 1.5rem;
+    padding-right: 1rem;
+    border-right: 4px solid black;
+}
+
+#navigation li> a:hover{
+    color: rgb(46, 240, 237);
+    text-decoration: underline;
+}
+
+/*==================== Design of the middle section ============================*/
+#middle-section{
+    height: 80vh;
+    overflow: auto;
+    padding: 2rem 0;
+
+    background-color: red;
+}
+
+/* To hide scroll bar of the middle section for Chrome */
+#middle-section::-webkit-scrollbar{
+    display: none;
+}
+
+/*To hide scroll bar of the middle section for IE, Edge and Firefox */
+#middle-section{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+/* Intro of the middle section (Car market in KGS) */
+#intro{
+    text-align: center;
+    font-size: 32px;
+}
+
+/*Detailed information paragraph under the intro element */
+#details{
+    text-align: justify;
+    padding: 0 4.5rem;
+    font-size: 18px;
+}
+
+/* Large vehicle picture at the center of the middle section */
+#carphoto{
+    height: 400px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/*================================ Design of the footer element ===================*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4.5rem;
+    height: 10vh;
+
+    background-color: rgb(171, 171, 230);
+}
+
+/* Container for the social media links */
+#social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Social media icons */
+#social img{
     height: 40px;
     width: 40px;
 }
 
-/******************************************** Styles for the popup ends *******************************************/
-
-/* Header of the main page (not popup) */
-header{
-    width: 80vw;
-    min-height: 10vh;
-    margin: 0 auto;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* All the social media links*/
+#social a{
+    color: black;
+    margin-right: 2.5rem;
 }
 
-/* Middle part of the main page excluding header and footer */
-.middle{
-    width: 100%;
-    min-height: 90vh;
-
-    background-image: url('./Images/urus2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* First Motors text logo */
-#main-intro{
-    margin-top: 8rem;
-    color: lime;
-    font-size: 6rem;
+/*============================ Design of the ABOUT.HTML ==============================*/
+/*Intro slogan of the about.html page */
+#about-intro{
     text-align: center;
+    font-size: 32px;
 }
 
-/* 'We bring you luxury' slogan */
-#main-slogan{
-    color: rgb(0, 255, 149);
-    font-size: 2rem;
-    font-style: italic;
+/* Container element for two paragraphs to divide them horizontally */
+#paragraph-container{
+    margin: 0.5rem 4.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-/* 'Learn More...' button */
-#learnbutton{
-    padding: 1rem 2.5rem;
-    margin: 2rem;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: all 0.2s linear;
-    cursor: pointer;
+/* Left paragraph */
+#first-paragraph{
+    height: 400px;
+    background-color: yellowgreen;
 }
 
-/* Animation is there once you hover 'Learn More...' button*/
-#learnbutton:hover{
-    transform: scale(0.98);
-    background-color: rgba(240, 248, 255, 0.813);
+/* Right paragraph */
+#second-paragraph{
+    background-color: yellowgreen;
 }
 
-/* Three stripes button which opens popup menu */
-.nav{
-    width: 45px;
-    display: block;
-}
-
-.nav div{
-    height: 4px;
-    background-color: white;
-    margin: 8px 0;
-    border-radius: 25px;
-    transition: 0.2s linear;
-}
-/*==== Children of the nav button =====*/
-.one{
-    width: 45px;
-}
-.two{
-    width: 27px;
-}
-.three{
-    width: 35px;
-}
-/*======================================*/
-
-.nav:hover div{
-    width: 45px;
+/* Another paragraph */
+#another-paragraph{
+    background-color: yellowgreen;
+    grid-column: span 2;
+    height: 150px;
 }
