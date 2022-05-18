@@ -136,6 +136,7 @@ footer{
 #social a{
     color: black;
     margin-right: 2.5rem;
+    font-weight: bold;
 }
 
 /*============================ Design of the ABOUT.HTML ==============================*/
@@ -169,4 +170,42 @@ footer{
     background-color: yellowgreen;
     grid-column: span 2;
     height: 150px;
+}
+
+/*=============================== Design of the HOWDOES.HTML page ==========================*/
+/* Intro of the howdoes.html page */
+#howdoes-intro{
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Descripton paragraph of the howdoes.html page */
+#howdoes-description{
+    margin: 0.5rem 4.5rem;
+    text-align: justify;
+}
+
+/*================================== Design of the SEARCH.HTML page ========================*/
+/* Intro of the search.html page*/
+#search-intro{
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Container element for the search form inputs */
+#search-form{
+    height: 300px;
+    width: 1000px;
+    background-color: aquamarine;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+}
+#search-form  *{
+    font-family: Helvetica, sans-serif;
+    outline: none;
+}
+
+/* To make a space between input elements */
+#search-form select{
+    margin-right: 1.5rem;
 }

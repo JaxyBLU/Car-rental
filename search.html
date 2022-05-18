@@ -7,7 +7,8 @@
     <title>АвтоРынок | Анализ рынка авто КР</title>
     <link rel="icon" href="./Images/round.png">
     <link rel="stylesheet" href="styles.css">
-    <script src="./Scripts/scripts.js" defer></script>
+    <script  src="./Scripts/scripts.js" defer></script>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -21,7 +22,17 @@
             </ul>
         </header>
         <section id="middle-section">
-            <h3>SEARCH</h3>
+            <h3 id="search-intro">SEARCH NOW</h3>
+            <div id="search-form">
+                <label for="make">Make:</label>
+                    <select name="make" id="make"></select>
+                <label for="model">Model:</label>
+                    <select name="model" id="model"></select>
+                <label for="year">Year:</label>
+                    <select name="year" id="year"></select>
+                <label for="engine">Engine: (liters)</label>
+                    <select name="engine" id="engine"></select>
+            </div>
         </section>
         <footer>
             <h3 id="company-name">Sherkah Cars LTD</h3>
@@ -35,5 +46,19 @@
             </div>
         </footer>
     </div>
+<!-- Script below contains only JQuery function to load data depending on the users choise -->
+<!-- All the other scripts are loaded seperately in the head of the document as seperate file -->
+    <script>
+        // Let's load all the brands (make) from txt file
+        $('#make').load('../Textdata/Models.txt');
+        // This allows to load models depending on the choosen brand
+        $("#make").change(function() {
+            $("#model").load("../Textdata/" + $(this).val() + ".txt");
+        });
+        // Let's load all the years from txt file
+        $('#year').load('../Textdata/Years.txt');
+        // Let's load engine capacities from txt file as well
+        $('#engine').load('../Textdata/Engines.txt');
+    </script>
 </body>
 </html>
