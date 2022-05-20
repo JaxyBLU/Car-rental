@@ -17,8 +17,7 @@ li{
 body{
     height: 100vh;
     width: 100%;
-
-    background-color: lime;
+    background-color: rgba(239, 233, 217, 0.5);
 }
 
 /* Main mother container inside the body which contains everything in it */
@@ -26,7 +25,7 @@ body{
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    background-color: lime;
+    box-shadow: 12px 0 15px -4px rgba(31, 73, 125, 0.6), -12px 0 8px -4px rgba(31, 73, 125, 0.6);
 }
 
 /*=========================== Header styles =================================*/
@@ -36,8 +35,7 @@ header{
     align-items: center;
     padding: 1rem 0;
     height: 10vh;
-
-    background-color: orange;
+    background-color: #faedcd;
 }
 
 /* H1 Element which serves as a simple text logo of the website */
@@ -59,6 +57,7 @@ header{
     margin-right: 1.5rem;
     padding-right: 1rem;
     border-right: 4px solid black;
+    transition: color 0.2s linear;
 }
 
 #navigation li> a:hover{
@@ -71,8 +70,7 @@ header{
     height: 80vh;
     overflow: auto;
     padding: 2rem 0;
-
-    background-color: red;
+    background-color: #A9A9A9;
 }
 
 /* To hide scroll bar of the middle section for Chrome */
@@ -115,7 +113,7 @@ footer{
     padding: 1rem 4.5rem;
     height: 10vh;
 
-    background-color: rgb(171, 171, 230);
+    background-color: #faedcd;
 }
 
 /* Container for the social media links */
@@ -157,17 +155,17 @@ footer{
 /* Left paragraph */
 #first-paragraph{
     height: 400px;
-    background-color: yellowgreen;
+    background-color: aquamarine;
 }
 
 /* Right paragraph */
 #second-paragraph{
-    background-color: yellowgreen;
+    background-color: aquamarine;
 }
 
 /* Another paragraph */
 #another-paragraph{
-    background-color: yellowgreen;
+    background-color: aquamarine;
     grid-column: span 2;
     height: 150px;
 }
@@ -194,11 +192,14 @@ footer{
 
 /* Container element for the search form inputs */
 #search-form{
-    height: 300px;
+    height: 70px;
     width: 1000px;
     background-color: aquamarine;
     margin: 0.5rem auto;
     padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #search-form  *{
     font-family: Helvetica, sans-serif;
@@ -208,4 +209,58 @@ footer{
 /* To make a space between input elements */
 #search-form select{
     margin-right: 1.5rem;
+}
+
+/* Search Button design */
+#search-button{
+    padding: 0.8rem;
+    border-radius: 35px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    width: 300px;
+    background-color: #A9A9A9;
+    color: white;
+}
+
+/* Container for displaying search results */
+#results-section{
+    width: 1000px;
+    background-color: aquamarine;
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+}
+
+/* h3 Item which displays the selected car model and brand */
+#results-model{
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 0.8rem;
+}
+
+/* Paragraph description of the selected car model */
+#results-description{
+    text-align: justify;
+    padding: 0 4.5rem;
+}
+
+/* Large SUV image in the search results */
+#suv-image{
+    height: 300px;
+    width: auto;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+/* Price for the selected car in the results */
+#results-price{
+    padding: 0.8rem 4.5rem;
+}
+
+/* Description of the price (small text) */
+#results-pricedescription{
+    padding: 0 5.5rem;
+    text-align: justify;
+    font-style: italic;
 }
