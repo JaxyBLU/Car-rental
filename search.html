@@ -23,21 +23,21 @@
         </header>
         <section id="middle-section">
             <h3 id="search-intro">SEARCH NOW</h3>
-            <div id="search-form">
+            <form id="search-form">
                 <label for="make">Make:</label>
-                    <select name="make" id="make"></select>
+                    <select name="make" id="make" required></select>
                 <label for="model">Model:</label>
-                    <select name="model" id="model">
+                    <select name="model" id="model" required>
                         <option value="0">Select the model</option>
                     </select>
                 <label for="year">Year:</label>
-                    <select name="year" id="year"></select>
+                    <select name="year" id="year" required></select>
                 <label for="engine">Engine: (liters)</label>
-                    <select name="engine" id="engine"></select>
+                    <select name="engine" id="engine" required></select>
                 <label for="crash">Crashed: (Level)</label>
-                    <select name="crashed" id="crashed"></select>
-                <button id="search-button">SEARCH NOW</button>
-            </div>
+                    <select name="crashed" id="crashed" required></select>
+                <input type="submit" id="search-button" value="SEARCH NOW">
+                </form>
             <div id="results-section">
                 <h3 id="results-model">Car Model</h3>
                 <p id="results-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt molestiae dignissimos temporibus maiores quidem officiis veniam. Perferendis architecto dolores necessitatibus?</p>

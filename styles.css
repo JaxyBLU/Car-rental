@@ -222,6 +222,15 @@ footer{
     width: 300px;
     background-color: #A9A9A9;
     color: white;
+    cursor: pointer;
+    transition: transform 0.2s linear background-color 0.2s linear;
+    transition: color 0.2s linear;
+}
+
+#search-button:hover{
+    transform: scale(0.98);
+    background-color: rgb(36, 32, 32);
+    color: rgb(46, 240, 237);
 }
 
 /* Container for displaying search results */
