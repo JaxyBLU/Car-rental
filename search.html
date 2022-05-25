@@ -62,7 +62,7 @@
 <!-- All the other scripts are loaded seperately in the head of the document as seperate file -->
     <script>
         // Let's load all the brands (make) from txt file
-        $('#make').load('../Textdata/Models.txt');
+        $('#make').load('../Textdata/Makes.txt');
         // This allows to load models depending on the choosen brand
         $("#make").change(function() {
             $("#model").load("../Textdata/" + $(this).val() + ".txt");

@@ -1,6 +1,6 @@
+<option value="Camry">Camry</option>
 <option value="Avensis">Avensis</option>
 <option value="Allion">Allion</option>
 <option value="Corolla">Corolla</option>
-<option value="Camry">Camry</option>
 <option value="RAV4">RAV4</option>
 <option value="Highlander">Highlander</option>

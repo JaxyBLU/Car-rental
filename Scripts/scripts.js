@@ -6,12 +6,14 @@ const engineInput = document.getElementById('engine');
 const crashInput = document.getElementById('crashed');
 const searchButton = document.getElementById('search-button');
 const inputForm = document.getElementById('search-form');
+const yearNow = 2022;
 
 /* EventListener for when form is submitted */
-inputForm.addEventListener('submit', function(e){
+inputForm.addEventListener('submit', async function(e){
     e.preventDefault();
     alert('Form Submitted!');
-    collectInput();
+    const prices = await fetchPricesForMake(collectInput());
+    console.log(prices);
 })
 
 /* Function for collecting input data */
@@ -24,5 +26,17 @@ function collectInput(){
         crashed: crashInput.value
     }
 
-    console.log(inputData);
+    return inputData;
 }
+
+/* Function for final price calculation */
+async function fetchPricesForMake(data){
+    fetch(`../Textdata/${data.make}PricesPerModel.json`)
+    .then(response => {
+        return response.json()
+    })
+    .then(jsondata => {
+        return jsondata;
+    })
+}
+
