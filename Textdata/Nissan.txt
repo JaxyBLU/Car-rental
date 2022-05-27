@@ -1,3 +1,0 @@
-<option value="Pathfinder">Pathfinder</option>
-<option value="Teana">Teana</option>
-<option value="Primera">Primera</option>

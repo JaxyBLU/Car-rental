@@ -1,3 +1,0 @@
-<option value="Accord">Accord</option>
-<option value="CR-V">CR-V</option>
-<option value="Civic">Civic</option>
