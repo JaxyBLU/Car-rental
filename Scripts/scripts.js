@@ -105,12 +105,15 @@ makeInput.addEventListener('change', function(){
 })
 
 /* EventListener for when form is submitted */
-inputForm.addEventListener('submit', async function(e){
+inputForm.addEventListener('submit', function(e){
+    const priceoutput = document.getElementById('results-price');
+    const imageoutput = document.getElementById('suv-image');
     e.preventDefault();
-    alert('Form Submitted!');
     const datanow = collectInput();
     const priceofthemodel = getPriceForModel(datanow.make, datanow.model);
     const finalprice = calculateFinalPrice(datanow, priceofthemodel);
+    priceoutput.innerHTML = `Price: ${finalprice} $`;
+    imageoutput.src = `../Images/Carmodels/${datanow.make}/${datanow.model}.png`;
 })
 
 /* Function for collecting input data */
@@ -152,5 +155,55 @@ function getPriceForModel(make, model){
 
 /* Function for calculating final price for the selected model and characteristics */
 function calculateFinalPrice(datanow, priceofthemodel){
-    
+
+    /* Age of the car times 150$ meaning that car loses 150$ of its price per year */
+    let finalprice = priceofthemodel - ((2022 - parseInt(datanow.year)) * 150);
+
+    /* Reduce the price depending on the engine capacity, higher the engine cheaper the vehicle gets */
+    switch(datanow.engine){
+        case "1.8":
+            finalprice -= 150;
+            break;
+        case "2.5":
+            finalprice -= 200;
+            break;
+        case "3.5":
+            finalprice -= 250;
+            break;
+        case "4.0":
+            finalprice -= 300;
+            break;
+        case "4.4":
+            finalprice -= 350;
+            break;
+        case "5.0":
+            finalprice -= 400;
+            break;
+        case "6.4":
+            finalprice -= 450;
+            break;
+    }
+
+    /* Now again reduce the price depending if its crashed */
+    switch(datanow.crashed){
+        case "0":
+            break;
+        case "1":
+            finalprice -= 500;
+            break;
+        case "2":
+            finalprice -= 1000;
+            break;
+        case "3":
+            finalprice -= 1500;
+            break;
+        case "4":
+            finalprice -= 2000;
+            break;
+        case "5":
+            finalprice -= 2500;
+            break;
+    }
+
+    return finalprice;
 }
